@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    android:padding="7dp"
+    tools:text="rock"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:background="@drawable/item_genre_list_bg"
+    android:gravity="center"
+    android:id="@+id/genre_name">
+
+</TextView>
