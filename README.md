@@ -3,6 +3,8 @@
 Under each genre, the songs are further grouped under *Albums* and *Artists*. Additionally, there 
 is a third tab *Tracks* that lists all the tracks under this genre ***at once***
 
+**You can test the application APK file is attached with this project in apk folder in root directory**
+
 
 - ## Exploring the app features:
 
