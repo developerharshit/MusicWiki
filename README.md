@@ -12,8 +12,11 @@ is a third tab *Tracks* that lists all the tracks under this genre ***at once***
       - The home screen shows the top 10 genres to the user and the list expands to show all the available genres(50).
       - To make things convinient for the users, *a _search bar_ has been added* so that users can directly search for the genre of their choice.
 	
+	>
+	![home](screenshots/1.jpg)  ![home](screenshots/2.jpg)
+
 	:point_right: Clicking on any genre displays a new genre detail screen to the user.
-    
+
     - ### Genre Detail Screen
       - A back button on top left corner, that takes the user back to the genre detail screen.
       - The name of genre selected on the top.
@@ -23,7 +26,9 @@ is a third tab *Tracks* that lists all the tracks under this genre ***at once***
         - **Albums**: If selected, lists top albums having songs of the selected genre.
         - **Tracks**: Lists top the tracks under this genre.
 	   
-
+	> 
+	![home](screenshots/3.jpg)  ![home](screenshots/4.jpg)	![home](screenshots/5.jpg)
+	
 	 :point_right: For all the three tabs available, a different layout for presenting the track/album/artist has been designed.
 	 
     - ### Album Detail Screen
@@ -35,8 +40,11 @@ is a third tab *Tracks* that lists all the tracks under this genre ***at once***
          - The artist and the number of plays from the album.
          - The other genres this album belong to, can be swiped horizontally if exceeds the screen width.
          - List of all the tracks in the album, with track title, artist name and album cover image.
+	 
+	 > 
+	![home](screenshots/6.jpg) 
          
-  :point_right: Any genre can be clicked and then the flow will be same as above.
+  	:point_right: Any genre can be clicked and then the flow will be same as above.
    
     - ### Artist Detail Screen
       - A back button on top left corner, that takes the user back to the genre detail screen.
@@ -48,6 +56,9 @@ is a third tab *Tracks* that lists all the tracks under this genre ***at once***
          - The other genres this artist has songs in, can be swiped horizontally if exceeds the screen width.
          - List of all the *Tracks* by the artist, with track title, artist name and album cover image, can be swiped horizontally if exceeds the screen width.
          - List of all the *Albums* by the artist, with album title, artist name and album cover image, can be swiped horizontally if exceeds the screen width.
+	 
+	 > 
+	![home](screenshots/7.jpg) 
          
 	 :point_right: Any genre can be clicked and then the flow will be same as above. Same for the album.
 
