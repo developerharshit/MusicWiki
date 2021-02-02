@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private final String BASE_URL = "http://ws.audioscrobbler.com/2.0/?";
+    private final String BASE_URL = "https://ws.audioscrobbler.com/2.0/?";
     private final String apiKey = "c08516dddb22e336aa34ce8e95590a29";
     private Api api;
 

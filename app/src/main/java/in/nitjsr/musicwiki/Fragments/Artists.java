@@ -32,7 +32,6 @@ public class Artists extends Fragment {
 
     private String genreName="";
     private Api api;
-    private ProgressDialog progressDialog;
     private ArrayList<Artist> dataList;
     private RecyclerView recyclerView;
     @Override
@@ -55,14 +54,11 @@ public class Artists extends Fragment {
             genreName = getActivity().getIntent().getStringExtra("genre");
         }
         api = new RetrofitClient().getInstance();
-        progressDialog = new ProgressDialog(getContext());
-        progressDialog.setMessage("Please Wait...");
         dataList = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recyclerView);
     }
 
     private void getTopArtists() {
-        progressDialog.show();
         Call<JsonObject> call = api.getTopArtists(genreName);
 
         call.enqueue(new Callback<JsonObject>() {
@@ -70,8 +66,8 @@ public class Artists extends Fragment {
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                 JsonObject data = response.body();
                 if (response.isSuccessful() && data.has("topartists")) {
-                    progressDialog.dismiss();
-                    for(int i=0;i<50;i++) {
+                    int n = data.get("topartists").getAsJsonObject().get("artist").getAsJsonArray().size();
+                    for(int i=0;i<n;i++) {
                         JsonObject albumObject = data.get("topartists").getAsJsonObject().get("artist").getAsJsonArray().get(i).getAsJsonObject();
                         Artist artist = new Artist();
                         artist.setName(albumObject.get("name").getAsString());
@@ -83,14 +79,12 @@ public class Artists extends Fragment {
                     createAlbumList();
 
                 } else {
-                    progressDialog.dismiss();
                     Toast.makeText(getContext(), "Error loading data", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-                progressDialog.dismiss();
             }
         });
     }

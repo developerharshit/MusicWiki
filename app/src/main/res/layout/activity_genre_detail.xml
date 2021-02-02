@@ -17,9 +17,26 @@
             android:layout_marginStart="16dp"
             android:text="MusicWiki"
             android:id="@+id/title"
+            android:layout_toEndOf="@id/back"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info"
+            android:padding="16dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/info"
+            app:tint="@color/white"/>
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/white" />
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout

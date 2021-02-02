@@ -20,12 +20,55 @@
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="@color/white"/>
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_cont"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_below="@id/topbar">
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_box"
+            tools:text="hello"
+            android:textColorHint="@color/gray"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:hint="Search..."
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_toStartOf="@+id/close"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_genre_list_bg"
+            android:layout_marginEnd="10dp"/>
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/white" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/genreList"
-        android:layout_below="@id/topbar"/>
+        android:layout_below="@id/search_cont"/>
 
 </RelativeLayout>

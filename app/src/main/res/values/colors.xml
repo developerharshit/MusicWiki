@@ -8,4 +8,5 @@
     <color name="colorPrimary">#1a1a1a</color>
     <color name="colorPrimaryDark">#1a1a1a</color>
     <color name="colorAccent">#AD1457</color>
+    <color name="lightGray">#b3b3b3</color>
 </resources>

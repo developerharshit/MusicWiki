@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".Activities.AlbumInfo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/layout"
+        android:background="@drawable/album_bg">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@drawable/test"
+            android:id="@+id/img"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/topbar"
+        android:background="@android:color/transparent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info"
+            android:padding="16dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/info"
+            app:tint="@color/white"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:padding="16dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back"
+            app:tint="@color/white"/>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        tools:text="hello world"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/albumName"
+        android:layout_below="@id/layout"
+        android:padding="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="hello world"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/artistName"
+        android:textAllCaps="true"
+        android:layout_below="@id/albumName"
+        android:padding="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genreList"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/artistName"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:visibility="visible"
+        android:layout_below="@+id/genreList"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genreList">
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/lightGray"
+            android:textSize="14sp"
+            android:autoLink="all"
+            android:visibility="gone"
+            tools:text="hello world" />
+    </ScrollView>
+</RelativeLayout>
